@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { NgLimeadeComponent } from './ng-limeade.component';
+import { ToastComponent } from './toast/toast.component';
+import {CommonModule} from "@angular/common";
 
 
 
 @NgModule({
-  declarations: [NgLimeadeComponent],
+  declarations: [NgLimeadeComponent, ToastComponent],
   imports: [
+    CommonModule
   ],
-  exports: [NgLimeadeComponent]
+  exports: [NgLimeadeComponent, ToastComponent]
 })
 export class NgLimeadeModule { }
