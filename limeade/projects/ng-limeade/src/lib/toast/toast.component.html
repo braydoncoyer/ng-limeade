@@ -6,9 +6,21 @@
       'toast__body-error': type === 'error'
      }">
   <div class="toast__body-content">
-    <div class="toast__body-content-circle"></div>
+    <div class="toast__body-content-circle">
+      <div class="toast__body-content-circle-item" [ngClass]="{
+      'success__circle-gradient': type === 'success',
+      'info__circle-gradient': type === 'info',
+      'warning__circle-gradient': type === 'warning',
+      'error__circle-gradient': type === 'error'
+     }"></div>
+    </div>
     <div class="toast__body-content-text">
-      <p class="toast__body-content-text-label">{{title}}</p>
+      <p class="toast__body-content-text-label" [ngClass]="{
+      'success__gradient': type === 'success',
+      'info__gradient': type === 'info',
+      'warning__gradient': type === 'warning',
+      'error__gradient': type === 'error'
+     }">{{title}}</p>
       <p class="toast__body-content-text-description">{{description}}</p>
     </div>
   </div>
