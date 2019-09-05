@@ -1,18 +1,19 @@
 <div class="limeade-demo">
   <div class="container">
     <div class="example">
-      <limeade-toast [type]="'success'" [title]="'Success!'"></limeade-toast>
-      <br>
-      <limeade-toast [type]="'success'" [title]="'Success!'" [description]="'Your request was successful! Congrats on making it this far!'"></limeade-toast>
-      <br>
-      <limeade-toast [type]="'info'" [title]="'Info...'"></limeade-toast>
-      <br>
-      <limeade-toast [type]="'info'" [title]="'Info...'" [description]="'Did you know that Dr. Pepper has 23 unique flavors? asdf asdf asdf asdf asdf asdf asfd '"></limeade-toast>
-      <br>
-      <limeade-toast [type]="'warning'" [title]="'Warning!'" [description]="'Something went wrong. We’re trying to fix it...'"></limeade-toast>
-      <br>
-      <limeade-toast [type]="'error'" [title]="'Error!'" [description]="'Could not login. Please contact your system admin for assis. asdf asdf asdf asdf asdf asdf adsfa f asdf asdf asdf asdf asdf asdf aasd fasdf adf asdf asdf asdf asdf asdf asfd adf adsf afasdfa sdfasdf asdf asdf asdfasdf asdfasdfas dfadfasdfasdf asdf'"></limeade-toast>
-      <br>
+      <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, commodi consequatur consequuntur dolor eligendi eveniet fugit magni nam necessitatibus non numquam odit porro quod, soluta veritatis vitae voluptas, voluptatem voluptates. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consectetur doloremque dolores eos ex iste magnam, maiores modi mollitia nesciunt pariatur praesentium ratione reiciendis rerum suscipit unde ut vero voluptatibus!</h1>
+    </div>
+    <div class="app__messages">
+      <limeade-toast-factory></limeade-toast-factory>
     </div>
   </div>
+
+  <button (click)="toast('success')">Success Toast</button>
+  <br>
+  <button (click)="toast('info')">Info Toast</button>
+  <br>
+  <button (click)="toast('warning')">Warning Toast</button>
+  <br>
+  <button (click)="toast('error')">Error Toast</button>
+
 </div>

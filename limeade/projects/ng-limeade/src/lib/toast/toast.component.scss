@@ -10,8 +10,8 @@ h1, h2, h3, h4, h5, p {
 $description-color: #ABABAB;
 
 .toast__body {
-  width: 453px;
-  //min-height: 64px;
+  width: 400px;
+  // width: 453px;
 
   display: flex;
   align-items: center;
@@ -26,10 +26,10 @@ $description-color: #ABABAB;
   border-radius: 9px;
 
   &:before {
+    z-index: -1;
     content: '';
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
-    z-index: -1;
     margin: -$border; /* !importanté */
     border-radius: inherit; /* !importanté */
   }
