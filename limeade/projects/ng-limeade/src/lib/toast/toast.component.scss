@@ -11,7 +11,7 @@ $description-color: #ABABAB;
 
 .toast__body {
   width: 453px;
-  min-height: 64px;
+  //min-height: 64px;
 
   display: flex;
   align-items: center;
@@ -35,9 +35,8 @@ $description-color: #ABABAB;
   }
 
   &-success {
-    color: linear-gradient(to right, #29D2AD 50%, #06CE81);
     &:before {
-      background: linear-gradient(to right, #29D2AD 50%, #06CE81);
+      background: linear-gradient(to right, #29D2AD 50%, #00B972);
     }
   }
 
@@ -63,22 +62,27 @@ $description-color: #ABABAB;
     display: flex;
     align-items: center;
     text-align: left;
+    padding: 13px 0;
 
     &-circle {
       margin-left: 14px;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      background: linear-gradient(to right, #29D2AD, #06CE81);
+
+      &-item {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        //background: linear-gradient(to right, #29D2AD, #06CE81);
+      }
     }
 
     &-text {
-      margin-left: 22px;
+      margin: 0 22px;
+      //width: 100%;
 
       &-label {
         font-size: 15px;
         font-weight: bold;
-        margin: 3px 0;
+        margin-bottom: 3px;
       }
 
       &-description {
@@ -89,3 +93,45 @@ $description-color: #ABABAB;
     }
   }
 }
+
+
+.success__gradient {
+  background: linear-gradient(to right, #29D2AD, #00B972 11%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.info__gradient {
+  background: linear-gradient(to right, #35C4FC, #0B9AD3 40%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.warning__gradient {
+  background: linear-gradient(to right, #FCCB00, #FF970C 40%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.error__gradient {
+  background: linear-gradient(to right, #FE323C 50%, #CD018C 40%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.success__circle-gradient {
+  background: linear-gradient(to right, #29D2AD 20%, #00B972);
+}
+
+.info__circle-gradient {
+  background: linear-gradient(to right, #35C4FC 20%, #0B9AD3);
+}
+
+.warning__circle-gradient {
+  background: linear-gradient(to right, #FCCB00 20%, #FF970C);
+}
+
+.error__circle-gradient {
+  background: linear-gradient(to right, #FE323C 20%, #CD018C);
+}
+
