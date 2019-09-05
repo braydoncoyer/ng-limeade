@@ -8,6 +8,8 @@ import {Component, Input, OnInit} from '@angular/core';
 export class ToastComponent implements OnInit {
 
   @Input() type: 'success' | 'info' | 'error' | 'warning';
+  @Input() title: string;
+  @Input() description: string;
 
   constructor() { }
 
