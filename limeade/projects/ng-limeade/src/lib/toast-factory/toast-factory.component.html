@@ -1,0 +1,9 @@
+<div *ngFor="let toast of toasts" class="toast__item">
+  <div class="toast__item-body">
+    <limeade-toast
+      [type]="toast.type"
+      [title]="toast.title"
+      [description]="toast.description"
+    ></limeade-toast>
+  </div>
+</div>

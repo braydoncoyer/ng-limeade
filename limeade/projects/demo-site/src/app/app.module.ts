@@ -4,6 +4,8 @@ import { NgLimeadeModule } from 'ng-limeade';
 
 import { AppComponent } from './app.component';
 
+import {ToastFactoryService} from '../../../ng-limeade/src/lib/services/toast-factory.service';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -12,7 +14,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     NgLimeadeModule
   ],
-  providers: [],
+  providers: [ToastFactoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,15 @@
+.toast__item {
+  margin: 20px;
+
+  &-body {
+    position: relative;
+    right: -550px;
+    animation: slide 0.5s forwards;
+  }
+}
+
+@keyframes slide {
+  100% {
+    right: 0;
+  }
+}
