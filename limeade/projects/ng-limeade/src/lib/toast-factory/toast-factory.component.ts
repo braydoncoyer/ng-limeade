@@ -37,8 +37,10 @@ export class ToastFactoryComponent implements OnInit, OnDestroy {
    });
   }
 
-  removeToast(toastToRemove: ToastInterface): void {
-    this.toasts = this.toasts.filter(toasts => toasts !== toastToRemove);
+  removeToast(toastToRemove): void {
+    console.log(toastToRemove);
+    console.log(this.toasts[1]);
+    this.toasts.splice(this.toasts.indexOf(toastToRemove), 1);
   }
 
   ngOnDestroy(): void {

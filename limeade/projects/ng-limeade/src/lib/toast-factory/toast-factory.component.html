@@ -1,9 +1,10 @@
-<div *ngFor="let toast of toasts" class="toast__item">
+<div *ngFor="let toast of toasts; let index = index" class="toast__item">
   <div class="toast__item-body">
     <limeade-toast
       [type]="toast.type"
       [title]="toast.title"
       [description]="toast.description"
+      (toastClicked)="removeToast($event)"
     ></limeade-toast>
   </div>
 </div>

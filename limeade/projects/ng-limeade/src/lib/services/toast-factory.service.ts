@@ -9,7 +9,7 @@ export class ToastFactoryService {
 
   subject = new Subject<ToastInterface>();
 
-  constructor() { }
+  constructor() {}
 
   getToast(): Observable<any> {
     console.log('Inside getToast');

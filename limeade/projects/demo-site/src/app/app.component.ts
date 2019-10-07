@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
   toast(type: string) {
     const toast: ToastInterface = {
       type: type,
-      title: 'A new toast!',
+      title: type,
       description: 'A description!'
     };
     this.toastService.showToast(toast);
