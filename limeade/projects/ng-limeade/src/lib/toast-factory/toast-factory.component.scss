@@ -3,13 +3,15 @@
 
   &-body {
     position: relative;
-    right: -550px;
+    transform: translateX(10px);
+    opacity: 0;
     animation: slide 0.5s forwards;
   }
 }
 
 @keyframes slide {
   100% {
-    right: 0;
+    transform: translateX(0%);
+    opacity: 1;
   }
 }
