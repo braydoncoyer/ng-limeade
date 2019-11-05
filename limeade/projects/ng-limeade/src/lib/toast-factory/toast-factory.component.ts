@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ToastInterface } from '../ToastInterface';
+import { ToastInterface } from '../models/ToastInterface';
 import { Subscription } from 'rxjs';
 import { ToastFactoryService } from '../services/toast-factory.service';
 

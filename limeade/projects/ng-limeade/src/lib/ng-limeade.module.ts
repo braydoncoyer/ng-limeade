@@ -7,7 +7,7 @@ import { ToastFactoryService } from './services/toast-factory.service';
 
 // export { ToastFactoryService } from './services/toast-factory.service';
 
-export {ToastInterface} from './ToastInterface';
+export {ToastInterface} from './models/ToastInterface';
 
 @NgModule({
   declarations: [NgLimeadeComponent, ToastComponent, ToastFactoryComponent],
