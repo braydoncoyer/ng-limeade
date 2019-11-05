@@ -23,8 +23,7 @@ export class AppComponent implements OnInit {
   toast(type: string) {
     const toast: ToastInterface = {
       type,
-      title: type,
-      description: 'This is a cool toast message! I live inside one of four types of notifications: success, info, warning and error!'
+      title: type
     };
     this.toastService.showToast(toast);
   }

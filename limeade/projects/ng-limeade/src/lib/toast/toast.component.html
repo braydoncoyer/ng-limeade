@@ -12,7 +12,9 @@
       'info__circle-gradient': type === 'info',
       'warning__circle-gradient': type === 'warning',
       'error__circle-gradient': type === 'error'
-     }"></div>
+     }">
+        <fa-icon [icon]="getIconName()"></fa-icon>
+      </div>
     </div>
     <div class="toast__body-content-text">
       <p class="toast__body-content-text-label" [ngClass]="{

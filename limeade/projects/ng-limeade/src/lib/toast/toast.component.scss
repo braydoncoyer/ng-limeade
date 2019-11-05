@@ -62,12 +62,16 @@ $description-color: #ABABAB;
     align-items: center;
     text-align: left;
     padding: 13px 0;
-    position: relative;
 
     &-circle {
       margin-left: 14px;
+      text-align: center;
 
       &-item {
+        vertical-align: middle;
+        line-height: 30px;
+        display: inline-block;
+        color: white;
         width: 30px;
         height: 30px;
         border-radius: 50%;
