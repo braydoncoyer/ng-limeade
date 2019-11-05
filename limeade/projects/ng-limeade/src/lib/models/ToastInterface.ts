@@ -1,5 +1,5 @@
 export interface ToastInterface {
   type: string;
   title: string;
-  description: string;
+  description?: string;
 }

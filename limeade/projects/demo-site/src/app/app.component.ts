@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import { ToastFactoryService } from 'ng-limeade';
-import { ToastInterface } from '../../../ng-limeade/src/lib/ToastInterface';
+import { ToastInterface } from '../../../ng-limeade/src/lib/models/ToastInterface';
 
 @Component({
   selector: 'app-root',
@@ -22,9 +22,9 @@ export class AppComponent implements OnInit {
 
   toast(type: string) {
     const toast: ToastInterface = {
-      type: type,
+      type,
       title: type,
-      description: 'A description!'
+      description: 'This is a cool toast message! I live inside one of four types of notifications: success, info, warning and error!'
     };
     this.toastService.showToast(toast);
   }

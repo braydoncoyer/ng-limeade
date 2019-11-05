@@ -1,5 +1,4 @@
 import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
-import { ToastInterface } from '../ToastInterface';
 
 @Component({
   selector: 'limeade-toast',
@@ -11,7 +10,8 @@ export class ToastComponent implements OnInit {
   @Input() type: 'success' | 'info' | 'error' | 'warning';
   @Input() title: string;
   @Input() description: string;
-  @Output() toastClicked: EventEmitter<ToastInterface> = new EventEmitter<ToastInterface>();
+  @Input() index: number;
+  @Output() toastClicked: EventEmitter<number> = new EventEmitter<number>();
 
   constructor() { }
 
@@ -19,13 +19,7 @@ export class ToastComponent implements OnInit {
   }
 
   toastClick() {
-    const toast: ToastInterface = {
-      type: this.type,
-      title: this.title,
-      description: this.description
-    }
-    console.log('Toast Click Method');
-    this.toastClicked.emit(toast);
+    this.toastClicked.emit(this.index);
   }
 
 }
