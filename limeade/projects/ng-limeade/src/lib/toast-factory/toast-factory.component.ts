@@ -12,19 +12,6 @@ export class ToastFactoryComponent implements OnInit, OnDestroy {
   toasts: ToastInterface[] = [];
   sub: Subscription;
 
-  toastWarning = {
-    title: 'Warning!',
-    type: 'warning',
-    description: 'A warning toast!'
-  };
-
-  toastInfo = {
-    title: 'Info...',
-    type: 'info',
-    description: 'Some info for you...'
-  };
-
-
   constructor(private toastService: ToastFactoryService) { }
 
   ngOnInit() {
@@ -38,18 +25,10 @@ export class ToastFactoryComponent implements OnInit, OnDestroy {
   }
 
   removeToast(toastToRemove): void {
-    console.log(toastToRemove);
-    console.log(this.toasts[1]);
-    this.toasts.splice(this.toasts.indexOf(toastToRemove), 1);
+    this.toasts.splice(toastToRemove, 1);
   }
 
   ngOnDestroy(): void {
-    console.log('Unsubscribe');
     this.sub.unsubscribe();
-  }
-
-  logToast() {
-    this.toastService.showToast(this.toastWarning);
-    console.log(this.toasts);
   }
 }
