@@ -1,4 +1,4 @@
-<div (click)="toastClick()" class="toast__body"
+<div class="toast__body"
      [ngClass]="{
       'toast__body-success': type === 'success',
       'toast__body-info': type === 'info',
@@ -22,6 +22,14 @@
       'error__gradient': type === 'error'
      }">{{title | titlecase}}</p>
       <p class="toast__body-content-text-description">{{description}}</p>
+    </div>
+    <div class="toast__body-content-close" (click)="toastClick()" [ngClass]="{
+      'success__close': type === 'success',
+      'info__close': type === 'info',
+      'warning__close': type === 'warning',
+      'error__close': type === 'error'
+     }">
+      <fa-icon [icon]="'times'"></fa-icon>
     </div>
   </div>
 </div>

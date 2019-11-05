@@ -62,6 +62,7 @@ $description-color: #ABABAB;
     align-items: center;
     text-align: left;
     padding: 13px 0;
+    position: relative;
 
     &-circle {
       margin-left: 14px;
@@ -70,13 +71,21 @@ $description-color: #ABABAB;
         width: 30px;
         height: 30px;
         border-radius: 50%;
-        //background: linear-gradient(to right, #29D2AD, #06CE81);
       }
+    }
+
+    &-close {
+      cursor: pointer;
+      font-size: 14px;
+      height: 20%;
+      padding: 5px;
+      position: absolute;
+      right: 3px;
+      top: 1px;
     }
 
     &-text {
       margin: 0 22px;
-      //width: 100%;
 
       &-label {
         font-size: 15px;
@@ -132,5 +141,21 @@ $description-color: #ABABAB;
 
 .error__circle-gradient {
   background: linear-gradient(to right, #FE323C 20%, #CD018C);
+}
+
+.success__close {
+  color: #00B972;
+}
+
+.info__close {
+  color: #0B9AD3;
+}
+
+.warning__close {
+  color: #FF970C;
+}
+
+.error__close {
+  color: #CD018C;
 }
 
