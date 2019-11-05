@@ -22,4 +22,18 @@ export class ToastComponent implements OnInit {
     this.toastClicked.emit(this.index);
   }
 
+  getIconName() {
+    switch (this.type) {
+      case 'success':
+        return 'check';
+      case 'info':
+        return 'question';
+      case 'warning':
+        return 'exclamation';
+      case 'error':
+        return 'times';
+      default:
+        return null;
+    }
+  }
 }
