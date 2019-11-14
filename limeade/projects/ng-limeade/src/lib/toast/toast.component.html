@@ -13,7 +13,7 @@
       'warning__circle-gradient': type === 'warning',
       'error__circle-gradient': type === 'error'
      }">
-        <fa-icon [icon]="getIconName()"></fa-icon>
+        <fa-icon [icon]="iconName ? iconName : getIconName()"></fa-icon>
       </div>
     </div>
     <div class="toast__body-content-text">

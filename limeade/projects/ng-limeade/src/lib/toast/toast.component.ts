@@ -11,6 +11,7 @@ export class ToastComponent implements OnInit {
   @Input() title: string;
   @Input() description: string;
   @Input() index: number;
+  @Input() iconName: string;
   @Output() toastClicked: EventEmitter<number> = new EventEmitter<number>();
 
   constructor() { }
