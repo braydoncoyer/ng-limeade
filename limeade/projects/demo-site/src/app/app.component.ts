@@ -27,4 +27,13 @@ export class AppComponent implements OnInit {
     };
     this.toastService.showToast(toast);
   }
+
+  customToast(type: string, icon: string) {
+    const toast: ToastInterface = {
+      type,
+      title: type,
+      iconName: icon
+    };
+    this.toastService.showToast(toast);
+  }
 }
