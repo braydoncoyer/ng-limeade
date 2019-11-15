@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { NgLimeadeComponent } from './ng-limeade.component';
 import { ToastComponent } from './toast/toast.component';
 import { CommonModule } from '@angular/common';
 import { ToastFactoryComponent } from './toast-factory/toast-factory.component';
@@ -11,10 +10,10 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 export {ToastInterface} from './models/ToastInterface';
 
 @NgModule({
-  declarations: [NgLimeadeComponent, ToastComponent, ToastFactoryComponent],
+  declarations: [ToastComponent, ToastFactoryComponent],
   imports: [CommonModule, FontAwesomeModule],
-  providers: [],
-  exports: [NgLimeadeComponent, ToastComponent, ToastFactoryComponent]
+  providers: [ToastFactoryService],
+  exports: [ToastComponent, ToastFactoryComponent]
 })
 export class NgLimeadeModule {
   constructor(library: FaIconLibrary) {
