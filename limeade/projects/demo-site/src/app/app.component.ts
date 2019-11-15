@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     const toast = {
-      title: 'Warning, Yo!',
+      title: null,
       type: 'warning',
       description: 'This is a warning from app'
     };
@@ -30,9 +30,9 @@ export class AppComponent implements OnInit {
 
   customToast(type: string, icon: string) {
     const toast: ToastInterface = {
-      type,
-      title: type,
-      iconName: icon
+      type: 'info',
+      title: 'Some info for you...',
+      description: 'Please note that at the end of the day we will be restarting our systems.'
     };
     this.toastService.showToast(toast);
   }
