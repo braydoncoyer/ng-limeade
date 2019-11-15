@@ -1,24 +1,84 @@
 # NgLimeade
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.3.
+DEMO: https://ngx-toastr.netlify.com/
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name --project ng-limeade` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ng-limeade`.
-> Note: Don't forget to add `--project ng-limeade` or else it will be added to the default project in your `angular.json` file. 
+- Toast Component Injection without being passed `ViewContainerRef`
+- No use of `*ngFor`. Fewer dirty checks and higher performance.
+- AoT compilation and lazy loading compatible
+- Component inheritance for custom toasts
+- SystemJS/UMD rollup bundle
+- Animations using Angular's
+  [Web Animations API](https://angular.io/docs/ts/latest/guide/animations.html)
+- Output toasts to an optional target directive
 
-## Build
 
-Run `ng build ng-limeade` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Publishing
+1). Install Font Awesome dependencies
+2). Inject ToastFactoryService into component
+3). In markup, add '<limeade-toast-factory></limeade-toast-factory>' component to page
+4). 
 
-After building your library with `ng build ng-limeade`, go to the dist folder `cd dist/ng-limeade` and run `npm publish`.
 
-## Running unit tests
+## Dependencies
+Before installing NgLimeade, install the following Font Awesome dependencies:
 
-Run `ng test ng-limeade` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+$ @fortawesome/angular-fontawesome
+$ @fortawesome/fontawesome-svg-core
+$ @fortawesome/free-regular-svg-icons
+$ @fortawesome/free-solid-svg-icons
+```
 
-## Further help
+## Installation
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```bash
+npm install ng-limeade
+```
+
+## Setup
+
+Import the `ToastFactoryService` into your root `AppModule`, and add the `NgLimeadeModule` to the imports array.
+
+```typescript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
+
+import {NgLimeadeModule} from 'ng-limeade';
+ 
+@NgModule({
+    imports: [
+        BrowserModule,
+        NgLimeadeModule
+    ],
+    declarations: [AppComponent],
+    bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+Add the `limeade-toast-factory` component to the base `app-root` component to ensure that toasts persist between routes.
+
+```html
+<div class="toasts-container">
+  <limeade-toast-factory></limeade-toast-factory>
+</div>
+```
+
+Inject the `ToastFactoryService` into your component and call the `showToast` function to trigger a new toast in your application.
+
+```typescript
+
+import {ToastFactoryService, ToastInterface} from 'ng-limeade';
+
+@Component({...})
+export class AppComponent {
+  constructor(private toastService: ToastFactoryService) {}
+
+  showSuccess() {
+    this.toastService.showToast('success');
+  }
+}
+```
