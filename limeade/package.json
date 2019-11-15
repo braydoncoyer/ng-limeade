@@ -7,6 +7,8 @@
     "start": "ng serve",
     "build_lib": "ng build ng-limeade",
     "build_lib_watch": "ng build ng-limeade --watch",
+    "npm_pack": "cd dist/ng-limeade && npm pack",
+    "package": "npm run build_lib && npm run npm_pack",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

@@ -12,7 +12,6 @@ export class ToastFactoryService {
   constructor() {}
 
   getToast(): Observable<any> {
-    console.log('Inside getToast');
     return this.subject.asObservable();
   }
 
