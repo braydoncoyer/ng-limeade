@@ -8,7 +8,7 @@ import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
 export class ToastComponent implements OnInit {
 
   @Input() type: 'success' | 'info' | 'error' | 'warning';
-  @Input() title: string;
+  @Input() title = 'Success!';
   @Input() description: string;
   @Input() index: number;
   @Input() iconName: string;
@@ -34,7 +34,7 @@ export class ToastComponent implements OnInit {
       case 'error':
         return 'times';
       default:
-        return null;
+        return 'check';
     }
   }
 }

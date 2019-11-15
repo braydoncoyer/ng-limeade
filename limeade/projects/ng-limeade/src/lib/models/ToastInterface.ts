@@ -1,6 +1,6 @@
 export interface ToastInterface {
-  type: string;
-  title: string;
+  type?: string;
+  title?: string;
   description?: string;
   iconName?: string;
 }
