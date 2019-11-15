@@ -1,40 +1,22 @@
 # NgLimeade
+A lightweight Angular Library that provides toast notifications with minimal setup.
 
 DEMO: https://ngx-toastr.netlify.com/
-
-## Features
-
-- Toast Component Injection without being passed `ViewContainerRef`
-- No use of `*ngFor`. Fewer dirty checks and higher performance.
-- AoT compilation and lazy loading compatible
-- Component inheritance for custom toasts
-- SystemJS/UMD rollup bundle
-- Animations using Angular's
-  [Web Animations API](https://angular.io/docs/ts/latest/guide/animations.html)
-- Output toasts to an optional target directive
-
-
-
-1). Install Font Awesome dependencies
-2). Inject ToastFactoryService into component
-3). In markup, add '<limeade-toast-factory></limeade-toast-factory>' component to page
-4). 
-
 
 ## Dependencies
 Before installing NgLimeade, install the following Font Awesome dependencies:
 
 ```bash
-$ @fortawesome/angular-fontawesome
-$ @fortawesome/fontawesome-svg-core
-$ @fortawesome/free-regular-svg-icons
-$ @fortawesome/free-solid-svg-icons
+$ npm install @fortawesome/angular-fontawesome
+$ npm install @fortawesome/fontawesome-svg-core
+$ npm install @fortawesome/free-regular-svg-icons
+$ npm install @fortawesome/free-solid-svg-icons
 ```
 
 ## Installation
 
 ```bash
-npm install ng-limeade
+$ npm install ng-limeade
 ```
 
 ## Basic Setup
@@ -68,7 +50,7 @@ Add the `limeade-toast-factory` component to the top-level component ( in this c
 ```
 
 Inject the `ToastFactoryService` into your component and call the `showToast` function to trigger a new toast in your application.
-If you do not pass any configuration into the `showToast` function, a `Success` toast will be created. For information on how to configure and create different types of toasts, see the Configuration section below.
+If you do not pass any configuration into the `showToast` function, a toast of type `success` will be created. For information on how to configure and create different types of toasts, see the Configuration section below.
 
 ```typescript
 

@@ -1,7 +1,7 @@
 {
   "name": "ng-limeade",
   "version": "1.0.0",
-  "description": "A lightweight Angular Library that provides toast notifications with minimal setup.",
+  "description": "Get toast notifications up and running in less than a minute! No joke!",
   "keywords": ["Angular", "Library", "Toast", "Notifications", "typescript", "alert", "toastr", "toasts", "js"],
   "repository": {
     "type": "git",
