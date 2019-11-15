@@ -4,7 +4,7 @@ import { ToastFactoryComponent } from './toast-factory.component';
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {ToastFactoryService} from '../services/toast-factory.service';
 import {of} from 'rxjs';
-import {ToastInterface} from "../models/ToastInterface";
+import {ToastInterface} from '../models/ToastInterface';
 
 @Component({
   selector: 'limeade-toast',
@@ -21,7 +21,7 @@ class MockLimeadeToastComponent {
 
 class MockToastFactoryService {
   getToast() {
-    return of(null)
+    return of(null);
   }
 }
 
