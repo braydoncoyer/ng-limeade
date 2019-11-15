@@ -1,12 +1,14 @@
-<div *ngFor="let toast of toasts; let index = index" class="toast__item">
-  <div class="toast__item-body">
-    <limeade-toast
-      [type]="toast.type"
-      [title]="toast.title"
-      [description]="toast.description"
-      [index]="index"
-      [iconName]="toast.iconName"
-      (toastClicked)="removeToast($event)"
-    ></limeade-toast>
+<div class="toast__container">
+  <div *ngFor="let toast of toasts; let index = index" class="toast__item">
+    <div class="toast__item-body">
+      <limeade-toast
+        [type]="toast.type"
+        [title]="toast.title"
+        [description]="toast.description"
+        [index]="index"
+        [iconName]="toast.iconName"
+        (toastClicked)="removeToast($event)"
+      ></limeade-toast>
+    </div>
   </div>
 </div>
