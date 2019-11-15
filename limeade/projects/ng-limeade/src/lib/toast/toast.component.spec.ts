@@ -57,9 +57,9 @@ describe('ToastComponent', () => {
     expect(result).toBe('check');
   });
 
-  it('should return null if type is null and when getIconName is called', () => {
-    component.type = null;
+  it('should return check if type is null and when getIconName is called', () => {
+    component.iconName = null;
     const result = component.getIconName();
-    expect(result).toBeNull();
+    expect(result).toBe('check');
   });
 });
