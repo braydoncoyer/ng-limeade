@@ -1,4 +1,5 @@
 # NgLimeade
+
 A lightweight Angular Library that provides toast notifications with minimal setup.
 
 ## Dependencies

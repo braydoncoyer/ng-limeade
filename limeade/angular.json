@@ -20,6 +20,7 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "main": "projects/ng-limeade/src/test.ts",
+            "codeCoverage": true,
             "tsConfig": "projects/ng-limeade/tsconfig.spec.json",
             "karmaConfig": "projects/ng-limeade/karma.conf.js"
           }
