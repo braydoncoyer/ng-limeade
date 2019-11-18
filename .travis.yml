@@ -9,7 +9,9 @@ branches:
     - master
 install:
   - cd limeade && npm install
+  - npm install -g codecov
 script:
   - npm test ng-limeade -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
+  - codecov -f ./coverage/*.json
 after_success:
   - codecov
