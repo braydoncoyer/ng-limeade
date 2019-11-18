@@ -18,4 +18,5 @@ before_script:
 script:
   - cd limeade
   - ls
+  - npm install
   - npm test ng-limeade -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
