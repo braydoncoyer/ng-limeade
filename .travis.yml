@@ -13,6 +13,7 @@ before_script:
   - npm install -g @angular/cli
   - npm install @angular-devkit/build-angular
   - npm install @angular-devkit/build-ng-packagr
+  - npm install @angular/compiler
   - npm install @angular/compiler-cli
 script:
   - cd limeade
