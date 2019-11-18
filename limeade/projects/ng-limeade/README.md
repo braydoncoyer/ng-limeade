@@ -1,6 +1,6 @@
 # NgLimeade
 
-[![Build Status](https://travis-ci.org/braydoncoyer/ng-limeade.svg?branch=master)](https://travis-ci.org/braydoncoyer/ng-limeade)
+[![Build Status](https://travis-ci.org/braydoncoyer/ng-limeade.svg?branch=master)](https://travis-ci.org/braydoncoyer/ng-limeade) [![codecov](https://codecov.io/gh/braydoncoyer/ng-limeade/branch/master/graph/badge.svg)](https://codecov.io/gh/braydoncoyer/ng-limeade)
 
 Get toast notifications up and running in less than a minute with NgLimeade! No joke!
 

@@ -2,11 +2,17 @@
 
 All notable changes to this project will be documented in this file and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.0.3
+### 2019-11-18
+
+#### Added
+- Added Travis and Codecov for project CI and reporting
+
 ## 1.0.2
 ### 2019-11-18
 
 #### Changed
-- Changed positioning of toasts for more consistent and expected results.
+- Changed positioning of toasts for more consistent and expected results
 
 ## 1.0.2
 ### 2019-11-16
