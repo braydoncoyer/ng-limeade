@@ -1,15 +1,11 @@
 language: node_js
 node_js:
-  - "10.9"
-dist: trusty
-sudo: required
+  - "11.0"
 branches:
   only:
     - master
 before_script:
-  - npm install @angular/cli@latest --save-dev
-  - npm install @angular/compiler-cli --save
-  - npm install --save-dev @angular-devkit/build-angular
+  - npm install -g @angular/cli
 script:
   - cd limeade
   - npm test ng-limeade -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
