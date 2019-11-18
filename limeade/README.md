@@ -1,27 +1,107 @@
-# Limeade
+# NgLimeade
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.3.
+Get toast notifications up and running in less than a minute with NgLimeade! No joke!
 
-## Development server
+## Dependencies
+Before installing NgLimeade, install the following Font Awesome dependencies:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```bash
+$ npm install @fortawesome/angular-fontawesome
+$ npm install @fortawesome/fontawesome-svg-core
+$ npm install @fortawesome/free-regular-svg-icons
+$ npm install @fortawesome/free-solid-svg-icons
+```
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```bash
+$ npm install ng-limeade
+```
 
-## Build
+## Basic Setup
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Import the `ToastFactoryService` into your root `AppModule`, and add the `NgLimeadeModule` to the imports array.
 
-## Running unit tests
+```typescript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+import {NgLimeadeModule} from 'ng-limeade';
+ 
+@NgModule({
+    imports: [
+        BrowserModule,
+        NgLimeadeModule
+    ],
+    declarations: [AppComponent],
+    bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
-## Running end-to-end tests
+Add the `limeade-toast-factory` component to the top-level component ( in this case, `app-root` ) to ensure that toasts persist between routes.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```html
+<div class="toasts-container">
+  <limeade-toast-factory></limeade-toast-factory>
+</div>
+```
 
-## Further help
+Inject the `ToastFactoryService` into your component and call the `showToast` function to trigger a new toast in your application.
+If you do not pass any configuration into the `showToast` function, a toast of type `success` will be created. For information on how to configure and create different types of toasts, see the Configuration section below.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```typescript
+
+import {ToastFactoryService} from 'ng-limeade';
+
+@Component({...})
+export class AppComponent {
+  constructor(private toastService: ToastFactoryService) {}
+
+  showSuccessToast() {
+    this.toastService.showToast();
+  }
+}
+```
+
+## Configuration
+While NgLimeade was created to allow you to incorporate toast notifications in your application with minimal setup, the library provides many configuration options that will allow you to cater notifications to your needs.
+### Types of Toasts  
+There are four types of toasts currently available in NgLimeade:
+* Success
+* Info
+* Warning
+* Error
+
+
+### Creating a Toast
+Import `ToastInterface` from `'ng-limeade'` and create a new object of type `ToastInterface` and set your configuration settings.
+Pass the variable into the `showToast` function to display a new toast in your application.
+
+```typescript
+
+import {ToastFactoryService, ToastInterface} from 'ng-limeade';
+
+@Component({...})
+export class AppComponent {
+  constructor(private toastService: ToastFactoryService) {}
+
+  showSuccessToast() {
+      const toast: ToastInterface = {
+          type: 'warning',
+          title: 'Warning!',
+          description: 'Something went wrong!'
+      };
+    this.toastService.showToast(toast);
+  }
+}
+```
+
+#### Toast Options
+| Option            | Type                           | Default           | Description                                                                                                                                    |
+| ----------------- | ------------------------------ | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| type              | 'success', 'info', 'warning', or 'error'                       | 'success'             | Used to determine the type of toast to be created as well as the icon to be used                                                                                                            |
+| title       | string                        | 'Success!'             | The title to be shown inside the toast. The color is determined by the type of toast                                                                                                                             
+| description           | string                         | null              | The description displays below the title and can consist of multiple lines of text                                                                                                                 
+| iconName   | string                         | 'check'              | The Font Awesome icon name to be displayed inside the toast    

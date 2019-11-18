@@ -1,6 +1,6 @@
 # NgLimeade
 
-A lightweight Angular Library that provides toast notifications with minimal setup.
+Get toast notifications up and running in less than a minute with NgLimeade! No joke!
 
 ## Dependencies
 Before installing NgLimeade, install the following Font Awesome dependencies:

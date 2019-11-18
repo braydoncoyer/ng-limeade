@@ -2,6 +2,7 @@
   "name": "ng-limeade",
   "version": "1.0.1",
   "description": "Get toast notifications up and running in less than a minute with NgLimeade! No joke!",
+  "license": "MIT",
   "keywords": [
     "Angular",
     "Library",
