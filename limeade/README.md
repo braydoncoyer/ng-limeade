@@ -1,5 +1,7 @@
 # NgLimeade
 
+[![Build Status](https://travis-ci.org/braydoncoyer/ng-limeade.svg?branch=master)](https://travis-ci.org/braydoncoyer/ng-limeade)
+
 Get toast notifications up and running in less than a minute with NgLimeade! No joke!
 
 ## Dependencies

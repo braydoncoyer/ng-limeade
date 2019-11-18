@@ -11,3 +11,5 @@ install:
   - cd limeade && npm install
 script:
   - npm test ng-limeade -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
+after_success:
+  - codecov
