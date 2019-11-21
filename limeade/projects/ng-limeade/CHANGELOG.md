@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.0.4
+### 2019-11-20
+
+#### Added
+- Added download and minified size badges. Added link to demo site
+- Added NgLimeade Logo to README
+
+
+#### Updated
+- Updated unit test to get to 100% coverage
+
+
 ## 1.0.3
 ### 2019-11-18
 

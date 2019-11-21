@@ -62,4 +62,25 @@ describe('ToastComponent', () => {
     const result = component.getIconName();
     expect(result).toBe('check');
   });
+
+  it('should return question if type is INFO and when getIconName is called', () => {
+    component.iconName = null;
+    component.type = 'info';
+    const result = component.getIconName();
+    expect(result).toBe('question');
+  });
+
+  it('should return exclamation if type is WARNING and when getIconName is called', () => {
+    component.iconName = null;
+    component.type = 'warning';
+    const result = component.getIconName();
+    expect(result).toBe('exclamation');
+  });
+
+  it('should return times if type is ERROR and when getIconName is called', () => {
+    component.iconName = null;
+    component.type = 'error';
+    const result = component.getIconName();
+    expect(result).toBe('times');
+  });
 });
