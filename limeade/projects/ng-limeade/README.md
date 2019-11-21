@@ -1,6 +1,4 @@
-# NgLimeade
-
-
+# [<img width="300px" src="https://i.ibb.co/94w4Fts/Ng-Limeade-Logo.png">](https://jolly-hopper-c7e830.netlify.com/)
 
 [![Build Status](https://travis-ci.org/braydoncoyer/ng-limeade.svg?branch=master)](https://travis-ci.org/braydoncoyer/ng-limeade) [![codecov](https://codecov.io/gh/braydoncoyer/ng-limeade/branch/master/graph/badge.svg)](https://codecov.io/gh/braydoncoyer/ng-limeade) ![npm](https://img.shields.io/npm/dw/ng-limeade) ![npm bundle size](https://img.shields.io/bundlephobia/min/ng-limeade)
 
