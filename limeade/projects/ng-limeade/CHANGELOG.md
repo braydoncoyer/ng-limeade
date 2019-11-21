@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file and adheres 
 
 #### Added
 - Added download and minified size badges. Added link to demo site
+- Added NgLimeade Logo to README
 
 
 #### Updated
