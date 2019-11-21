@@ -1,8 +1,19 @@
 # NgLimeade
 
+
+
 [![Build Status](https://travis-ci.org/braydoncoyer/ng-limeade.svg?branch=master)](https://travis-ci.org/braydoncoyer/ng-limeade) [![codecov](https://codecov.io/gh/braydoncoyer/ng-limeade/branch/master/graph/badge.svg)](https://codecov.io/gh/braydoncoyer/ng-limeade) ![npm](https://img.shields.io/npm/dw/ng-limeade) ![npm bundle size](https://img.shields.io/bundlephobia/min/ng-limeade)
 
 Get toast notifications up and running in less than a minute with NgLimeade! No joke!
+
+
+[<img src="https://i.ibb.co/dpLvVjW/Screen-Shot-2019-11-16-at-8-17-55-PM.png">](https://jolly-hopper-c7e830.netlify.com/)
+
+
+####Demo
+[See NgLimeade in action HERE](https://jolly-hopper-c7e830.netlify.com/)
+
+
 
 ## Dependencies
 Before installing NgLimeade, install the following Font Awesome dependencies:
